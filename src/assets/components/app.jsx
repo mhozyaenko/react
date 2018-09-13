@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './app.scss';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import "./app.scss";
+
 class App extends Component {
-    render() {
-        return (
+  render() {
+    return (
             <div className="App">
 
 
@@ -11,14 +12,14 @@ class App extends Component {
 
             </div>
     );
-    }
+  }
 }
 
 App.propTypes = {
-    username: PropTypes.string,
+  username: PropTypes.string,
 };
 
 App.defaultProps = {
-    username: 'default user',
+  username: 'default user',
 };
 export default App;
