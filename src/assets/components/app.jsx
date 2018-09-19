@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import "./app.scss";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './app.scss';
 
 class App extends Component {
   render() {

@@ -1,16 +1,20 @@
 @font-face {
-    font-family: 'myFont';
-    src: url('./assets/fonts/myriadpro-regular.eot') format('eot'),
-         url('./assets/fonts/myriadpro-regular.otf') format('otf'),
-         url('./assets/fonts/myriadpro-regular.svg') format('svg'),
-         url('./assets/fonts/myriadpro-regular.ttf') format('ttf'),
-         url('./assets/fonts/myriadpro-regular.woff') format('woff');
-  }
-body {
-  background: $colorBgr;
+	font-family: 'myFont';
+	src: url("./assets/fonts/myriadpro-regular.eot") format("eot"),
+	url("./assets/fonts/myriadpro-regular.otf") format("otf"),
+	url("./assets/fonts/myriadpro-regular.svg") format("svg"),
+	url("./assets/fonts/myriadpro-regular.ttf") format("ttf"),
+	url("./assets/fonts/myriadpro-regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
+
+body {
+	background: $colorBgr;
+}
+
 h1 {
-  font-family: 'myFont';
-  font-size: 25px;
-  color: $fontColor;
+	font-family: 'myFont';
+	font-size: 25px;
+	color: $fontColor;
 }

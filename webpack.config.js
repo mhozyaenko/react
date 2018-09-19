@@ -8,73 +8,71 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.join(process.cwd(), 'dist'),
-    filename: '[name].js',
+    filename: '[name].js'
   },
   module: {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
       use: {
-        loader: 'babel-loader',
-      },
+        loader: 'babel-loader'
+      }
     }, {
       test: /\.(scss|css)$/,
       use: [{
-        loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+        loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
       }, {
         loader: 'css-loader',
-        options: { sourceMap: !isProduction },
+        options: { sourceMap: !isProduction }
       }, {
         loader: 'sass-loader',
-        options: { sourceMap: !isProduction },
+        options: { sourceMap: !isProduction }
       }, {
         loader: 'sass-resources-loader',
         options: {
           resources: [
-            './src/assets/styles/_resources.scss',
-          ],
-        },
-      }],
+            './src/assets/styles/_resources.scss'
+          ]
+        }
+      }]
     },
     {
       test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
       use: [{
-        // loader: require.resolve("file-loader") + "?name=../[path][name].[ext]",
-        loader: 'file-loader',
+         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'fonts/',
-        },
-      }],
+          outputPath: './fonts/'
+        }
+      }]
     }, {
       test: /\.(png|jpe?g|gif)$/,
       use: [{
-        // loader: require.resolve("file-loader") + "?name=../[path][name].[ext]",
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'img/',
-        },
-      }],
-    },
-    ],
+          outputPath: 'img/'
+        }
+      }]
+    }
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css',
+      chunkFilename: '[id].css'
     }),
     new HtmlWebpackPlugin({
       title: 'Webpack Sandbox',
       filename: 'index.html',
       chunks: ['main'],
       template: './src/assets/templates/index.html',
-      inject: true,
-    }),
+      inject: true
+    })
   ],
   devServer: {
     contentBase: path.join(process.cwd(), 'dist'),
     compress: true,
-    port: 3000,
-  },
+    port: 3000
+  }
 };
