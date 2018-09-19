@@ -74,5 +74,7 @@ module.exports = {
     contentBase: path.join(process.cwd(), 'dist'),
     compress: true,
     port: 3000
-  }
+  },
+    // components: './src/components/**/*.{js,jsx}',
+    // webpackConfig: require('./webpack.config.js')
 };
