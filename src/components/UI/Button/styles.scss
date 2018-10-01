@@ -1,0 +1,23 @@
+.Button {
+  color: $colorWhite;
+  background: $colorPrimary;
+  font-size: 25px;
+  font-family: $fontPrimary;
+  padding: 15px 20px;
+  border: none;
+  box-shadow: none;
+  transition: .5s;
+  &:hover {
+    color: $colorPrimary;
+    background: $colorWhite;
+    border: 1px solid $colorPrimary
+  }
+}
+
+.Blue {
+  background: $colorBlue;
+  &:hover {
+    color: $colorBlue;
+    border-color: $colorBlue;
+  }
+}

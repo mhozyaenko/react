@@ -1,0 +1,27 @@
+.Modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    border: 1px solid $colorDark;
+    display: none;
+    flex-direction: column;
+    background: $colorWhite;
+
+    &-content {
+      font-size: 24px;
+      font-family: $fontPrimary;
+      text-align: center;
+      padding: 15px;
+    }
+  }
+  &.isOpen &-window {
+    display: flex;
+  }
+}
