@@ -7,6 +7,7 @@
   border: none;
   box-shadow: none;
   transition: .5s;
+  outline: none;
   &:hover {
     color: $colorPrimary;
     background: $colorWhite;
