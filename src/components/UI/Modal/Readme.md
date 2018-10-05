@@ -3,6 +3,6 @@ Opened Modal
 
 <Modal isOpen>
   <h2> Some Content </h2>
-  <Button>ok</Button>
+  <Button onClick={()=> document.querySelector('.Modal').classList.remove('isOpen')}>close</Button>
  </Modal>
 ```
