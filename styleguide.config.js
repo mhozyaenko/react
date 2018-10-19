@@ -27,7 +27,7 @@ module.exports = {
       components: './src/components/UI/**/*.jsx',
     }, {
       name: 'HOCs',
-      components: 'src/hocs/**/*.{js,jsx}',
+      components: 'src/hocs/**/*.jsx',
     }],
   }],
 };
